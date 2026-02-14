@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>San Diego Remodeling</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    emailjs.init("LXQhPmrN9js3Bhwix");
+  </script>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container header-row">
+    <div class="logo">San Diego Remodeling</div>
+
+    <nav class="nav">
+      <button class="menu-btn" onclick="toggleMenu()" aria-label="Open Menu">☰</button>
+      <ul id="nav-links" class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#location">Location</a></li>
+        <li><a class="nav-cta" href="#contact">Free Estimate</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section id="home" class="hero fade-in">
+  <div class="hero-overlay">
+    <div class="container">
+      <h1>Reliable Residential Contracting</h1>
+      <p>Home Remodeling • Repairs • Upgrades — Done Right</p>
+      <div class="hero-actions">
+        <button class="btn btn-accent" onclick="scrollToContact()">Get a Free Quote</button>
+        <a class="btn btn-ghost" href="#services">View Services</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services" class="section fade-in">
+  <div class="container">
+    <div class="section-head">
+      <h2>Our Services</h2>
+      <p class="section-subtitle">Clean work, fair pricing, and quality materials. Here’s what we do.</p>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-title">Plumbing</div>
+        <ul class="service-list">
+          <li>ABS</li>
+          <li>Copper</li>
+          <li>Gas Line</li>
+          <li>PVC</li>
+          <li>PEX</li>
+          <li>Water Heater Replacement</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <div class="service-title">Electrical</div>
+        <ul class="service-list">
+          <li>Recessed Lighting (High Quality LED)</li>
+          <li>Outlets & Switches</li>
+          <li>Ceiling Fans & Exhaust Fans</li>
+          <li>220V Oven / Appliance Circuits</li>
+          <li>Outdoor Lights</li>
+          <li>Pool Electrical</li>
+          <li>Security Cameras</li>
+          <li>LED Strip Lights</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <div class="service-title">Construction</div>
+        <ul class="service-list">
+          <li>Framing</li>
+          <li>Concrete Slabs</li>
+          <li>Stucco</li>
+          <li>Drywall</li>
+          <li>Hood Installation</li>
+          <li>HVAC Repair</li>
+          <li>Epoxy Flooring</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <div class="service-title">Cabinets, Doors & Windows</div>
+        <ul class="service-list">
+          <li>Bathroom Cabinets</li>
+          <li>Kitchen Cabinets</li>
+          <li>Windows</li>
+          <li>Sliding Doors</li>
+          <li>Interior & Exterior Doors</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <div class="service-title">Exterior & Outdoor</div>
+        <ul class="service-list">
+          <li>Interior & Exterior Paint</li>
+          <li>Turf Installation</li>
+          <li>Fence Installation</li>
+          <li>Gutter Installation</li>
+          <li>Backyard Clean-Out</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="section section-alt fade-in">
+  <div class="container">
+    <div class="section-head">
+      <h2>Recent Projects</h2>
+      <p class="section-subtitle">A few examples of the type of work we do.</p>
+    </div>
+
+    <div class="projects">
+      <div class="project" onclick="openModal('https://images.unsplash.com/photo-1600585154340-be6161a56a0c')">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Kitchen Renovation" />
+        <p>Kitchen Renovation</p>
+      </div>
+
+      <div class="project" onclick="openModal('https://images.unsplash.com/photo-1568605114967-8130f3a36994')">
+        <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994" alt="Custom Home" />
+        <p>Custom Home</p>
+      </div>
+
+      <div class="project" onclick="openModal('https://images.unsplash.com/photo-1505691938895-1758d7feb511')">
+        <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511" alt="Bathroom Remodel" />
+        <p>Bathroom Remodel</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Location -->
+<section id="location" class="section fade-in">
+  <div class="container">
+    <div class="section-head">
+      <h2>Our Service Area</h2>
+      <p class="section-subtitle">
+        Based in <strong>San Diego, California</strong>, serving homeowners across <strong>San Diego County</strong>.
+      </p>
+    </div>
+
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps?q=San%20Diego%2C%20CA&output=embed"
+        loading="lazy"
+        allowfullscreen
+        title="San Diego Service Area Map"
+      ></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="section section-alt fade-in">
+  <div class="container">
+    <div class="section-head">
+      <h2>Get Your Free Estimate</h2>
+      <p class="section-subtitle">Tell us what you need — we’ll respond quickly.</p>
+    </div>
+
+    <div class="contact-wrapper">
+      <div class="contact-details">
+        <div class="contact-box">
+          <h3>Contact Info</h3>
+
+          <div class="contact-item">
+            <span class="contact-icon">📞</span>
+            <div>
+              <div class="contact-label">Call</div>
+              <a href="tel:16196552629">(619) 655-2629</a><br />
+              <a href="tel:16195588342">(619) 558-8342</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <span class="contact-icon">✉️</span>
+            <div>
+              <div class="contact-label">Email</div>
+              <a href="mailto:Sandiegorenovation@gmail.com">Sandiegorenovation@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="contact-note">
+            Available for residential projects, repairs, upgrades, and installs.
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <div class="contact-box">
+          <h3>Request a Quote</h3>
+
+          <form onsubmit="submitForm(event)">
+            <input id="name" type="text" placeholder="Your Name" required />
+            <input id="email" type="email" placeholder="Your Email" required />
+            <textarea id="message" placeholder="Describe your project..." required></textarea>
+            <button class="btn btn-dark" type="submit">Send Request</button>
+            <p id="form-msg" class="form-msg"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-row">
+    <p>© 2026 San Diego Remodeling</p>
+  </div>
+</footer>
+
+<div id="modal" class="modal" onclick="closeModalOnBackdrop(event)">
+  <span class="modal-close" onclick="closeModal()">×</span>
+  <img id="modal-img" alt="Project Image" />
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
